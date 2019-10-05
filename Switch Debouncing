@@ -1,0 +1,13 @@
+bit Key_off_flag = 0;
+
+if(Key_off_flag)
+        {
+            buf_seg[3] = buf_seg[2];
+            buf_seg[2] = buf_seg[1];
+            buf_seg[1] = buf_seg[0];
+            Key_off_flag = ~Key_off_flag;
+        } 
+        buf_seg[0] = key_num;
+    }
+    else
+        Key_off_flag = 1;
